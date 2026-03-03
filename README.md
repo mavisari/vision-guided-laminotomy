@@ -10,6 +10,10 @@ The proposed system combines:
 - Hand–eye calibration
 - Coordinate transformation into the robot reference frame
 - Simulation of robot-assisted motion planning
+- 
+<p align="center"> <img src="workflow.png" width="800"> </p>
 
-The entire workflow has been validated in a simulated environment using a KUKA LBR iiwa 7 manipulator.
+The entire workflow has been validated in a simulated environment using a KUKA LBR iiwa 7 manipulator. Images were acquired using an Intel RealSense D435 camera (acqimm.py), with resolution of 640x480. This resolution was used as a trade off between image detail and a fast processing for a realtime detection. 
+
+## Object Detection 
 
