@@ -67,7 +67,18 @@ Validation was performed by:
 - Comparing them with ground-truth robot frame points
 - Computing Euclidean distance
 The quantitative results are mean error along axis and rmse.
-<p align="center"> <img src="validation_method.png" width="700"> </p> <p align="center"> <img src="validation.png" width="700"> </p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="validation_method.png" width="450"><br>
+      <em>Hand–eye validation methodology</em>
+    </td>
+    <td align="center">
+      <img src="validation.png" width="450"><br>
+      <em>Validation results in RViz</em>
+    </td>
+  </tr>
+</table>
 
 ## Robot simulation (ROS2 + Movelt2)
 The simulation is performed using:
