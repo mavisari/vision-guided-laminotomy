@@ -1,1 +1,1 @@
-# Vision-Guided-Robotic-Assistance-for-Laminotomy
+# Vision Guided Robotic Assistance for Spinal Interventions
