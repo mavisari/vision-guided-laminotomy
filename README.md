@@ -48,4 +48,29 @@ where:
 - $B_i$ represents the motion of the calibration target in the camera frame  
 - $X$ is the unknown camera-to-end-effector transformation
 
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="images/transformation_chain.png" width="450"><br>
+      <em>Transformation chain from camera to robot base frame</em>
+    </td>
+    <td align="center">
+      <img src="images/iiwa7.png" width="450"><br>
+      <em>KUKA LBR iiwa 7 simulation environment</em>
+    </td>
+  </tr>
+</table>
+
+
+## Robot simulation (ROS2 + Movelt2)
+The simulation is performed using:
+
+ROS2 Humble
+
+MoveIt2
+
+lbr-stack
+
+RViz
+
 
