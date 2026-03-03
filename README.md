@@ -18,13 +18,9 @@ The entire workflow has been validated in a simulated environment using a KUKA L
 ## Object Detection 
 The L4-L5 laminae region is detected using YOLOv8. 
 
+```python
 from ultralytics import YOLO
 model = YOLO("yolov8s.pt")
-model.train(
-    data="dataset/data.yaml",
-    epochs=50,
-    batch=16,
-    imgsz=640
-)
+model.train(data="data.yaml", epochs=50, batch=16)
 
 
