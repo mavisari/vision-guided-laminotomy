@@ -15,12 +15,29 @@ The proposed system combines:
 
 The entire workflow has been validated in a simulated environment using a KUKA LBR iiwa 7 manipulator. Images were acquired using an Intel RealSense D435 camera (acqimm.py), with resolution of 640x480. This resolution was used as a trade off between image detail and a fast processing for a realtime detection. These images formed the raw dataset. The overall dataset was created through Robotflow. 
 
-## Object Detection 
-The L4-L5 laminae region is detected using YOLOv8. 
+## Object Detection and Centroid Calculation
+The L4-L5 laminae region is detected using YOLOv8.
 
 ```python
 from ultralytics import YOLO
 model = YOLO("yolov8s.pt")
 model.train(data="data.yaml", epochs=50, batch=16)
+
+After detection:
+1. Bounding box center is computed
+2. Pixel coordinates are deprojected using depth
+3. 3D centroid is stabilized
+
+<p align="center"> <img src="centroidcalculation.png" width="800"> </p>
+
+As a result, a realtime detection with centroid calculation is obtained. Stability is given by a Kalman filter application.
+
+<p align="center"> <img src="objectdetection.png" width="800"> </p>
+
+## Hand-eye Calibration
+Camera Intrinsic Calibration is perfomed usign OpenCV and images with reprojection error > 0.50 px were discarded. The rigid trasformation between camera and end effector is estimated solving:
+$$
+A_i X = X B_i
+$$
 
 
