@@ -11,7 +11,10 @@ The proposed system combines:
 - Coordinate transformation into the robot reference frame
 - Simulation of robot-assisted motion planning
  
-<p align="center"> <img src="workflow.png" width="800"> </p>
+<p align="center"> <img src="images/workflow.png" width="500"> </p>
+<p align="center">
+  <em>Figure 1 – Workflow.</em>
+</p>
 
 The entire workflow has been validated in a simulated environment using a KUKA LBR iiwa 7 manipulator. Images were acquired using an Intel RealSense D435 camera (acqimm.py), with resolution of 640x480. This resolution was used as a trade off between image detail and a fast processing for a realtime detection. These images formed the raw dataset. The overall dataset was created through Robotflow. 
 
@@ -29,11 +32,17 @@ After detection:
 2. Pixel coordinates are deprojected using depth
 3. 3D centroid is stabilized
 
-<p align="center"> <img src="centroidcalculation.png" width="800"> </p>
+<p align="center"> <img src="images/centroid_calculation.png" width="500"> </p>
+<p align="center">
+  <em>Figure 2 – Centroid Calculation.</em>
+</p>
 
 As a result, a realtime detection with centroid calculation is obtained. Stability is given by a Kalman filter application.
 
-<p align="center"> <img src="objectdetection.PNG" width="500"> </p>
+<p align="center"> <img src="images/objectdetection.PNG" width="500"> </p>
+<p align="center">
+  <em>Figure 3 – Realtime detection and centroid calcuation.</em>
+</p>
 
 ## Hand-eye Calibration
 Camera Intrinsic Calibration is perfomed usign OpenCV and images with reprojection error > 0.50 px were discarded. The rigid trasformation between camera and end effector is estimated solving:
@@ -51,11 +60,11 @@ where:
 <table align="center">
   <tr>
     <td align="center">
-      <img src="transformation chain .png" width="450"><br>
+      <img src="images/transformation chain .png" width="450"><br>
       <em>Transformation chain from camera to robot base frame</em>
     </td>
     <td align="center">
-      <img src="imm_iiwa7.png" width="450"><br>
+      <img src="images/imm_iiwa7.png" width="450"><br>
       <em>KUKA LBR iiwa 7 simulation environment</em>
     </td>
   </tr>
@@ -70,11 +79,11 @@ The quantitative results are mean error along axis and rmse.
 <table align="center">
   <tr>
     <td align="center">
-      <img src="validation_method.png" width="300"><br>
+      <img src="images/validation_method.png" width="300"><br>
       <em>Hand–eye validation methodology</em>
     </td>
     <td align="center">
-      <img src="validation.png" width="300"><br>
+      <img src="images/validation.png" width="300"><br>
       <em>Validation results in RViz</em>
     </td>
   </tr>
@@ -121,3 +130,6 @@ Then build:
 colcon build
 source install/setup.bash
 ```
+# Authors 
+Medical Robotics and Technologies for computer aided surgery laboratory 2025 - 2026
+Elena Blaco, Beatrice Andrea Mantegari, Maria Vittoria Sari 
