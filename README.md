@@ -11,7 +11,7 @@ The proposed system combines:
 - Coordinate transformation into the robot reference frame
 - Simulation of robot-assisted motion planning
  
-<p align="center"> <img src="images/workflow.png" width="500"> </p>
+<p align="center"> <img src="images/workflow.png" width="600"> </p>
 <p align="center">
   <em>Figure 1 – Workflow.</em>
 </p>
@@ -32,7 +32,7 @@ After detection:
 2. Pixel coordinates are deprojected using depth
 3. 3D centroid is stabilized
 
-<p align="center"> <img src="images/centroid_calculation.png" width="500"> </p>
+<p align="center"> <img src="images/centroid_calculation.png" width="600"> </p>
 <p align="center">
   <em>Figure 2 – Centroid Calculation.</em>
 </p>
@@ -132,4 +132,5 @@ source install/setup.bash
 ```
 # Authors 
 Medical Robotics and Technologies for computer aided surgery laboratory 2025 - 2026
+
 Elena Blaco, Beatrice Andrea Mantegari, Maria Vittoria Sari 
